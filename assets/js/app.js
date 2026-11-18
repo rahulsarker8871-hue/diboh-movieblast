@@ -1,19 +1,27 @@
 let allMovies = [];
 const $ = id => document.getElementById(id);
 
-fetch('data/movies.json').then(res => res.json()).then(data => {
-  allMovies = data;
-  initApp();
-});
+fetch('data/movies.json')
+  .then(res => res.json())
+  .then(data => {
+    allMovies = data;
+    initApp();
+  })
+  .catch(err => {
+    console.error("Error loading movies:", err);
+    document.getElementById('hero-content').innerHTML = "<h1>Error loading data</h1>";
+  });
 
 function initApp() {
   const topMovie = [...allMovies].sort((a,b) => b.popularity - a.popularity)[0];
-  $('hero-backdrop').style.backgroundImage = `url('${topMovie.poster}')`;
-  $('hero-content').innerHTML = `
-    <h1>${topMovie.title}</h1>
-    <p>${topMovie.description}</p>
-    <button class="btn-primary" onclick="openModal('${topMovie.id}')">বিস্তারিত দেখুন</button>
-  `;
+  if(topMovie) {
+    $('hero-backdrop').style.backgroundImage = `url('${topMovie.poster}')`;
+    $('hero-content').innerHTML = `
+      <h1>${topMovie.title}</h1>
+      <p>${topMovie.description}</p>
+      <button class="btn-primary" onclick="openModal('${topMovie.id}')">বিস্তারিত দেখুন</button>
+    `;
+  }
 
   renderGrid('trendingGrid', [...allMovies].sort((a,b) => b.popularity - a.popularity).slice(0, 5));
   renderGrid('latestGrid', [...allMovies].sort((a,b) => b.year - a.year).slice(0, 5));
@@ -26,7 +34,9 @@ function initApp() {
 }
 
 function renderGrid(containerId, movies) {
-  $(containerId).innerHTML = movies.map(m => `
+  const container = $(containerId);
+  if(!container) return;
+  container.innerHTML = movies.map(m => `
     <div class="movie-card" onclick="openModal('${m.id}')">
       <img src="${m.poster}" alt="${m.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/200x300?text=No+Image'">
       <div class="movie-info">
