@@ -1,102 +1,132 @@
 [
   {
-    "id": "nosferatu-1922", 
-    "title": "Nosferatu", 
-    "year": 1922, 
-    "language": "Silent", 
-    "genre": ["Horror", "Fantasy"], 
+    "id": "nosferatu-1922", "title": "Nosferatu", "year": 1922, "language": "Silent", "runtime": "94 min", "genre": ["Horror", "Fantasy"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nosferatu_poster.jpg/400px-Nosferatu_poster.jpg",
-    "description": "A classic German Expressionist horror film directed by F.W. Murnau. The mysterious Count Orlok brings a plague of terror to a small town. A monumental masterpiece of early vampire cinema.",
-    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Nosferatu+1922"}]
+    "description": "A classic German Expressionist horror film directed by F.W. Murnau. The mysterious Count Orlok brings a plague of terror to a small town.",
+    "cast": ["Max Schreck", "Gustav von Wangenheim", "Greta Schröder"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright expired. Hosted legally on Internet Archive.",
+    "rating": 8.1, "popularity": 95,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~500MB", "url": "https://archive.org/search?query=Nosferatu+1922"},
+      {"quality": "720p", "size": "~1.2GB", "url": "https://archive.org/search?query=Nosferatu+1922"},
+      {"quality": "1080p", "size": "~2.5GB", "url": "https://archive.org/search?query=Nosferatu+1922"}
+    ]
   },
   {
-    "id": "metropolis-1927", 
-    "title": "Metropolis", 
-    "year": 1927, 
-    "language": "Silent", 
-    "genre": ["Sci-Fi", "Drama"], 
+    "id": "metropolis-1927", "title": "Metropolis", "year": 1927, "language": "Silent", "runtime": "153 min", "genre": ["Sci-Fi", "Drama"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Metropolis_poster.jpg/400px-Metropolis_poster.jpg",
-    "description": "Fritz Lang's futuristic masterpiece. In a dystopian city divided between the wealthy elite and the working class, a forbidden romance sparks a revolution. A defining film of the sci-fi genre.",
-    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=Metropolis+1927"}]
+    "description": "Fritz Lang's futuristic masterpiece. In a dystopian city divided between the wealthy elite and the working class, a forbidden romance sparks a revolution.",
+    "cast": ["Brigitte Helm", "Alfred Abel", "Gustav Fröhlich"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright expired. Hosted legally on Internet Archive.",
+    "rating": 8.3, "popularity": 88,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~700MB", "url": "https://archive.org/search?query=Metropolis+1927"},
+      {"quality": "720p", "size": "~1.5GB", "url": "https://archive.org/search?query=Metropolis+1927"},
+      {"quality": "1080p", "size": "~3.2GB", "url": "https://archive.org/search?query=Metropolis+1927"}
+    ]
   },
   {
-    "id": "night-living-dead-1968", 
-    "title": "Night of the Living Dead", 
-    "year": 1968, 
-    "language": "English", 
-    "genre": ["Horror", "Thriller"], 
+    "id": "night-living-dead-1968", "title": "Night of the Living Dead", "year": 1968, "language": "English", "runtime": "96 min", "genre": ["Horror", "Thriller"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Night_of_the_Living_Dead_%281968%29_poster.jpg/400px-Night_of_the_Living_Dead_%281968%29_poster.jpg",
-    "description": "George A. Romero's cult classic that birthed the modern zombie genre. A group of survivors barricade themselves in a farmhouse against hordes of the undead in a desperate fight for survival.",
-    "downloadOptions": [{"quality": "1080p", "url": "https://archive.org/search?query=Night+of+the+Living+Dead+1968"}]
+    "description": "George A. Romero's cult classic that birthed the modern zombie genre. A group of survivors barricade themselves in a farmhouse against hordes of the undead.",
+    "cast": ["Duane Jones", "Judith O'Dea", "Karl Hardman"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Failure to renew copyright. Hosted legally on Internet Archive.",
+    "rating": 7.9, "popularity": 90,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~450MB", "url": "https://archive.org/search?query=Night+of+the+Living+Dead+1968"},
+      {"quality": "720p", "size": "~1.1GB", "url": "https://archive.org/search?query=Night+of+the+Living+Dead+1968"},
+      {"quality": "1080p", "size": "~2.8GB", "url": "https://archive.org/search?query=Night+of+the+Living+Dead+1968"}
+    ]
   },
   {
-    "id": "the-general-1926", 
-    "title": "The General", 
-    "year": 1926, 
-    "language": "Silent", 
-    "genre": ["Comedy", "Action"], 
+    "id": "the-general-1926", "title": "The General", "year": 1926, "language": "Silent", "runtime": "78 min", "genre": ["Comedy", "Action"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_General_%281926%29_poster.jpg/400px-The_General_%281926%29_poster.jpg",
-    "description": "A silent comedy masterpiece starring and directed by Buster Keaton. A thrilling train chase unfolds as a Southern engineer tries to rescue his stolen locomotive and the love of his life.",
-    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=The+General+1926+Buster+Keaton"}]
+    "description": "A silent comedy masterpiece starring Buster Keaton. A thrilling train chase unfolds as a Southern engineer tries to rescue his stolen locomotive and the love of his life.",
+    "cast": ["Buster Keaton", "Marion Mack", "Glen Cavender"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright expired. Hosted legally on Internet Archive.",
+    "rating": 8.1, "popularity": 82,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~400MB", "url": "https://archive.org/search?query=The+General+1926+Buster+Keaton"},
+      {"quality": "720p", "size": "~900MB", "url": "https://archive.org/search?query=The+General+1926+Buster+Keaton"},
+      {"quality": "1080p", "size": "~2.0GB", "url": "https://archive.org/search?query=The+General+1926+Buster+Keaton"}
+    ]
   },
   {
-    "id": "cabinet-dr-caligari-1920", 
-    "title": "The Cabinet of Dr. Caligari", 
-    "year": 1920, 
-    "language": "Silent", 
-    "genre": ["Horror", "Mystery"], 
+    "id": "cabinet-dr-caligari-1920", "title": "The Cabinet of Dr. Caligari", "year": 1920, "language": "Silent", "runtime": "76 min", "genre": ["Horror", "Mystery"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/The_Cabinet_of_Dr._Caligari_poster.jpg/400px-The_Cabinet_of_Dr._Caligari_poster.jpg",
-    "description": "The quintessential German Expressionist film. Featuring twisted, painted sets and a chilling psychological narrative, it tells the story of a hypnotist who uses a sleepwalker to commit murders.",
-    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Cabinet+of+Dr+Caligari+1920"}]
+    "description": "The quintessential German Expressionist film. Featuring twisted, painted sets and a chilling psychological narrative about a hypnotist and a sleepwalker.",
+    "cast": ["Werner Krauss", "Conrad Veidt", "Friedrich Feher"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright expired. Hosted legally on Internet Archive.",
+    "rating": 8.0, "popularity": 78,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~350MB", "url": "https://archive.org/search?query=Cabinet+of+Dr+Caligari+1920"},
+      {"quality": "720p", "size": "~800MB", "url": "https://archive.org/search?query=Cabinet+of+Dr+Caligari+1920"},
+      {"quality": "1080p", "size": "~1.8GB", "url": "https://archive.org/search?query=Cabinet+of+Dr+Caligari+1920"}
+    ]
   },
   {
-    "id": "charade-1963", 
-    "title": "Charade", 
-    "year": 1963, 
-    "language": "English", 
-    "genre": ["Comedy", "Thriller", "Romance"], 
+    "id": "charade-1963", "title": "Charade", "year": 1963, "language": "English", "runtime": "113 min", "genre": ["Comedy", "Thriller", "Romance"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Charade_%281963_film%29_poster.jpg/400px-Charade_%281963_film%29_poster.jpg",
-    "description": "A stylish romantic thriller directed by Stanley Donen. A young widow in Paris finds herself pursued by several mysterious men, all hunting for a fortune stolen by her late husband.",
-    "downloadOptions": [{"quality": "1080p", "url": "https://archive.org/search?query=Charade+1963"}]
+    "description": "A stylish romantic thriller directed by Stanley Donen. A young widow in Paris finds herself pursued by several mysterious men, all hunting for a stolen fortune.",
+    "cast": ["Cary Grant", "Audrey Hepburn", "Walter Matthau"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Defective copyright notice. Public domain in the US.",
+    "rating": 7.9, "popularity": 68,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~600MB", "url": "https://archive.org/search?query=Charade+1963"},
+      {"quality": "720p", "size": "~1.4GB", "url": "https://archive.org/search?query=Charade+1963"},
+      {"quality": "1080p", "size": "~3.0GB", "url": "https://archive.org/search?query=Charade+1963"}
+    ]
   },
   {
-    "id": "detour-1945", 
-    "title": "Detour", 
-    "year": 1945, 
-    "language": "English", 
-    "genre": ["Drama", "Thriller"], 
+    "id": "detour-1945", "title": "Detour", "year": 1945, "language": "English", "runtime": "68 min", "genre": ["Drama", "Thriller"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Detour_%281945_film%29_poster.jpg/400px-Detour_%281945_film%29_poster.jpg",
-    "description": "Edgar G. Ulmer's gritty, low-budget film noir. A hitchhiking piano player finds his luck turning from bad to worse as he gets entangled in a web of crime, blackmail, and murder.",
-    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=Detour+1945"}]
+    "description": "Edgar G. Ulmer's gritty, low-budget film noir. A hitchhiking piano player finds his luck turning from bad to worse as he gets entangled in crime.",
+    "cast": ["Tom Neal", "Ann Savage", "Claudia Drake"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright not renewed. Hosted legally on Internet Archive.",
+    "rating": 7.3, "popularity": 65,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~300MB", "url": "https://archive.org/search?query=Detour+1945"},
+      {"quality": "720p", "size": "~700MB", "url": "https://archive.org/search?query=Detour+1945"},
+      {"quality": "1080p", "size": "~1.5GB", "url": "https://archive.org/search?query=Detour+1945"}
+    ]
   },
   {
-    "id": "sherlock-jr-1924", 
-    "title": "Sherlock Jr.", 
-    "year": 1924, 
-    "language": "Silent", 
-    "genre": ["Comedy", "Fantasy"], 
+    "id": "sherlock-jr-1924", "title": "Sherlock Jr.", "year": 1924, "language": "Silent", "runtime": "45 min", "genre": ["Comedy", "Fantasy"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sherlock_Jr._%281924%29_poster.jpg/400px-Sherlock_Jr._%281924%29_poster.jpg",
-    "description": "One of Buster Keaton's most inventive works. A young projectionist dreams of becoming a detective, stepping literally into the movie screen to solve a thrilling mystery.",
-    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Sherlock+Jr+1924"}]
+    "description": "One of Buster Keaton's most inventive works. A young projectionist dreams of becoming a detective, stepping literally into the movie screen to solve a mystery.",
+    "cast": ["Buster Keaton", "Kathryn McGuire", "Joe Keaton"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright expired. Hosted legally on Internet Archive.",
+    "rating": 8.2, "popularity": 76,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~200MB", "url": "https://archive.org/search?query=Sherlock+Jr+1924"},
+      {"quality": "720p", "size": "~500MB", "url": "https://archive.org/search?query=Sherlock+Jr+1924"},
+      {"quality": "1080p", "size": "~1.2GB", "url": "https://archive.org/search?query=Sherlock+Jr+1924"}
+    ]
   },
   {
-    "id": "his-girl-friday-1940", 
-    "title": "His Girl Friday", 
-    "year": 1940, 
-    "language": "English", 
-    "genre": ["Comedy", "Drama"], 
+    "id": "his-girl-friday-1940", "title": "His Girl Friday", "year": 1940, "language": "English", "runtime": "92 min", "genre": ["Comedy", "Drama"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/His_Girl_Friday_poster.jpg/400px-His_Girl_Friday_poster.jpg",
-    "description": "Howard Hawks' sparkling screwball comedy. A fast-talking newspaper editor goes to extreme lengths to stop his ace reporter and ex-wife from getting remarried and leaving the paper.",
-    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=His+Girl+Friday+1940"}]
+    "description": "Howard Hawks' sparkling screwball comedy. A fast-talking newspaper editor goes to extreme lengths to stop his ace reporter and ex-wife from remarrying.",
+    "cast": ["Cary Grant", "Rosalind Russell", "Ralph Bellamy"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright not renewed. Hosted legally on Internet Archive.",
+    "rating": 7.9, "popularity": 70,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~450MB", "url": "https://archive.org/search?query=His+Girl+Friday+1940"},
+      {"quality": "720p", "size": "~1.0GB", "url": "https://archive.org/search?query=His+Girl+Friday+1940"},
+      {"quality": "1080p", "size": "~2.2GB", "url": "https://archive.org/search?query=His+Girl+Friday+1940"}
+    ]
   },
   {
-    "id": "plan-9-1959", 
-    "title": "Plan 9 from Outer Space", 
-    "year": 1959, 
-    "language": "English", 
-    "genre": ["Sci-Fi", "Horror"], 
+    "id": "plan-9-1959", "title": "Plan 9 from Outer Space", "year": 1959, "language": "English", "runtime": "79 min", "genre": ["Sci-Fi", "Horror"], 
     "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Plan_9_from_Outer_Space_%281959%29_poster.jpg/400px-Plan_9_from_Outer_Space_%281959%29_poster.jpg",
-    "description": "Ed Wood's legendary sci-fi classic. Aliens attempt to resurrect the dead to stop humanity from destroying the universe, in this notoriously entertaining and iconic B-movie.",
-    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Plan+9+from+Outer+Space+1959"}]
+    "description": "Ed Wood's legendary sci-fi classic. Aliens attempt to resurrect the dead to stop humanity from destroying the universe, in this iconic B-movie.",
+    "cast": ["Gregory Walcott", "Mona McKinnon", "Bela Lugosi"],
+    "sourceName": "Internet Archive", "rightsStatus": "Public Domain", "rightsEvidence": "Copyright not renewed. Hosted legally on Internet Archive.",
+    "rating": 4.0, "popularity": 72,
+    "downloadOptions": [
+      {"quality": "480p", "size": "~400MB", "url": "https://archive.org/search?query=Plan+9+from+Outer+Space+1959"},
+      {"quality": "720p", "size": "~850MB", "url": "https://archive.org/search?query=Plan+9+from+Outer+Space+1959"},
+      {"quality": "1080p", "size": "~1.9GB", "url": "https://archive.org/search?query=Plan+9+from+Outer+Space+1959"}
+    ]
   }
 ]

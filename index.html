@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diboh MovieBlast — বৈধ পাবলিক ডোমেইন মুভি</title>
+<title>Diboh MovieBlast — Premium Public Domain Movies</title>
+<meta name="description" content="Download and stream verified public domain movies legally. High-quality 480p, 720p, 1080p.">
+<!-- Open Graph SEO -->
+<meta property="og:title" content="Diboh MovieBlast — Premium Public Domain Movies">
+<meta property="og:description" content="Download and stream verified public domain movies legally.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nosferatu_poster.jpg/400px-Nosferatu_poster.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -11,7 +17,7 @@
 <header class="site-header">
   <div class="nav-wrap">
     <a href="index.html" class="logo">Diboh<span>MovieBlast</span></a>
-    <nav class="main-nav"><a href="index.html">হোম</a><a href="#">ট্রেন্ডিং</a><a href="#">ক্যাটাগরি</a></nav>
+    <nav class="main-nav"><a href="index.html">হোম</a><a href="#trending">ট্রেন্ডিং</a><a href="#latest">সর্বশেষ</a></nav>
     <div class="nav-search"><input id="searchInput" type="search" placeholder="মুভি খুঁজুন..." autocomplete="off"></div>
   </div>
 </header>
@@ -27,29 +33,66 @@
     <select id="langFilter"><option value="">সব ভাষা</option></select>
   </div>
 
-  <section class="section">
-    <h2 class="section-title">🔥 ট্রেন্ডিং মুভি</h2>
-    <div id="movieGrid" class="movie-grid"></div>
-    <div id="noResults" class="empty-state hidden">
-      <h2>কোনো মুভি পাওয়া যায়নি</h2>
-      <p>অন্য কিছু লিখে সার্চ করুন।</p>
-    </div>
+  <!-- Search Results (Hidden by default) -->
+  <section class="section hidden" id="searchResultsSection">
+    <h2 class="section-title">🔍 সার্চ ফলাফল</h2>
+    <div id="searchGrid" class="movie-grid"></div>
+    <div id="noResults" class="empty-state hidden"><h2>কোনো মুভি পাওয়া যায়নি</h2></div>
   </section>
+
+  <!-- Default Categories -->
+  <div id="defaultSections">
+    <section class="section" id="trending">
+      <h2 class="section-title">🔥 ট্রেন্ডিং মুভি</h2>
+      <div id="trendingGrid" class="movie-grid"></div>
+    </section>
+
+    <section class="section" id="latest">
+      <h2 class="section-title">🆕 সর্বশেষ যোগ করা</h2>
+      <div id="latestGrid" class="movie-grid"></div>
+    </section>
+
+    <section class="section" id="popular">
+      <h2 class="section-title">⭐ সর্বাধিক জনপ্রিয়</h2>
+      <div id="popularGrid" class="movie-grid"></div>
+    </section>
+  </div>
 </main>
 
 <footer class="site-footer">
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="copyright.html">Copyright Policy</a>
+  </div>
   <p>© 2025 Diboh MovieBlast | শুধুমাত্র বৈধ পাবলিক ডোমেইন কন্টেন্ট।</p>
 </footer>
 
+<!-- Detailed Modal -->
 <div class="modal hidden" id="modal">
   <div class="modal-content">
     <button class="close-btn" id="closeModal">✕</button>
-    <img id="modal-img" src="" alt="Poster">
-    <div class="modal-info">
-      <h2 id="modal-title"></h2>
-      <p id="modal-desc"></p>
-      <p><strong>সোর্স:</strong> Internet Archive</p>
-      <a href="#" id="modal-download" class="btn-primary" target="_blank">ডাউনলোড করুন</a>
+    <div class="modal-body">
+      <img id="modal-img" src="" alt="Poster" onerror="this.src='https://via.placeholder.com/300x450?text=No+Image'">
+      <div class="modal-info">
+        <h2 id="modal-title"></h2>
+        <div class="meta-tags">
+          <span id="modal-year"></span>
+          <span id="modal-runtime"></span>
+          <span id="modal-rating"></span>
+        </div>
+        <p id="modal-desc" class="synopsis"></p>
+        <p class="cast"><strong>Cast:</strong> <span id="modal-cast"></span></p>
+        
+        <div class="rights-box">
+          <p><strong>Source:</strong> <span id="modal-source"></span></p>
+          <p><strong>Rights:</strong> <span id="modal-rights" class="badge-success"></span></p>
+          <p class="small-text"><em id="modal-evidence"></em></p>
+        </div>
+
+        <h3 class="download-title">⬇️ Download / Stream Options</h3>
+        <div class="download-buttons" id="modal-downloads"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -57,3 +100,210 @@
 <script src="assets/js/app.js"></script>
 </body>
 </html>
+
+cat << 'EOF' > index.html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diboh MovieBlast — Premium Public Domain Movies</title>
+<meta name="description" content="Download and stream verified public domain movies legally. High-quality 480p, 720p, 1080p.">
+<!-- Open Graph SEO -->
+<meta property="og:title" content="Diboh MovieBlast — Premium Public Domain Movies">
+<meta property="og:description" content="Download and stream verified public domain movies legally.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nosferatu_poster.jpg/400px-Nosferatu_poster.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">Diboh<span>MovieBlast</span></a>
+    <nav class="main-nav"><a href="index.html">হোম</a><a href="#trending">ট্রেন্ডিং</a><a href="#latest">সর্বশেষ</a></nav>
+    <div class="nav-search"><input id="searchInput" type="search" placeholder="মুভি খুঁজুন..." autocomplete="off"></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hero-backdrop" id="hero-backdrop"></div>
+    <div class="hero-content" id="hero-content"></div>
+  </section>
+
+  <div class="filter-section">
+    <select id="genreFilter"><option value="">সব জেনার</option></select>
+    <select id="langFilter"><option value="">সব ভাষা</option></select>
+  </div>
+
+  <!-- Search Results (Hidden by default) -->
+  <section class="section hidden" id="searchResultsSection">
+    <h2 class="section-title">🔍 সার্চ ফলাফল</h2>
+    <div id="searchGrid" class="movie-grid"></div>
+    <div id="noResults" class="empty-state hidden"><h2>কোনো মুভি পাওয়া যায়নি</h2></div>
+  </section>
+
+  <!-- Default Categories -->
+  <div id="defaultSections">
+    <section class="section" id="trending">
+      <h2 class="section-title">🔥 ট্রেন্ডিং মুভি</h2>
+      <div id="trendingGrid" class="movie-grid"></div>
+    </section>
+
+    <section class="section" id="latest">
+      <h2 class="section-title">🆕 সর্বশেষ যোগ করা</h2>
+      <div id="latestGrid" class="movie-grid"></div>
+    </section>
+
+    <section class="section" id="popular">
+      <h2 class="section-title">⭐ সর্বাধিক জনপ্রিয়</h2>
+      <div id="popularGrid" class="movie-grid"></div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="copyright.html">Copyright Policy</a>
+  </div>
+  <p>© 2025 Diboh MovieBlast | শুধুমাত্র বৈধ পাবলিক ডোমেইন কন্টেন্ট।</p>
+</footer>
+
+<!-- Detailed Modal -->
+<div class="modal hidden" id="modal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeModal">✕</button>
+    <div class="modal-body">
+      <img id="modal-img" src="" alt="Poster" onerror="this.src='https://via.placeholder.com/300x450?text=No+Image'">
+      <div class="modal-info">
+        <h2 id="modal-title"></h2>
+        <div class="meta-tags">
+          <span id="modal-year"></span>
+          <span id="modal-runtime"></span>
+          <span id="modal-rating"></span>
+        </div>
+        <p id="modal-desc" class="synopsis"></p>
+        <p class="cast"><strong>Cast:</strong> <span id="modal-cast"></span></p>
+        
+        <div class="rights-box">
+          <p><strong>Source:</strong> <span id="modal-source"></span></p>
+          <p><strong>Rights:</strong> <span id="modal-rights" class="badge-success"></span></p>
+          <p class="small-text"><em id="modal-evidence"></em></p>
+        </div>
+
+        <h3 class="download-title">⬇️ Download / Stream Options</h3>
+        <div class="download-buttons" id="modal-downloads"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
+cat << 'EOF' > assets/js/app.js
+let allMovies = [];
+const $ = id => document.getElementById(id);
+
+fetch('data/movies.json').then(res => res.json()).then(data => {
+  allMovies = data;
+  initApp();
+});
+
+function initApp() {
+  // Hero Setup (Top Popular)
+  const topMovie = [...allMovies].sort((a,b) => b.popularity - a.popularity)[0];
+  $('hero-backdrop').style.backgroundImage = `url('${topMovie.poster}')`;
+  $('hero-content').innerHTML = `
+    <h1>${topMovie.title}</h1>
+    <p>${topMovie.description}</p>
+    <button class="btn-primary" onclick="openModal('${topMovie.id}')">বিস্তারিত দেখুন</button>
+  `;
+
+  renderGrid('trendingGrid', [...allMovies].sort((a,b) => b.popularity - a.popularity).slice(0, 5));
+  renderGrid('latestGrid', [...allMovies].sort((a,b) => b.year - a.year).slice(0, 5));
+  renderGrid('popularGrid', [...allMovies].sort((a,b) => b.rating - a.rating).slice(0, 5));
+
+  // Populate Filters
+  const genres = [...new Set(allMovies.flatMap(m => m.genre))];
+  const langs = [...new Set(allMovies.map(m => m.language))];
+  $('genreFilter').innerHTML += genres.map(g => `<option value="${g}">${g}</option>`).join('');
+  $('langFilter').innerHTML += langs.map(l => `<option value="${l}">${l}</option>`).join('');
+}
+
+function renderGrid(containerId, movies) {
+  $(containerId).innerHTML = movies.map(m => `
+    <div class="movie-card" onclick="openModal('${m.id}')">
+      <img src="${m.poster}" alt="${m.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/200x300?text=No+Image'">
+      <div class="movie-info">
+        <h3>${m.title}</h3>
+        <p>${m.year} • ${m.language}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openModal(id) {
+  const m = allMovies.find(x => x.id === id);
+  if(!m) return;
+  
+  $('modal-img').src = m.poster;
+  $('modal-title').textContent = m.title;
+  $('modal-year').textContent = m.year;
+  $('modal-runtime').textContent = m.runtime;
+  $('modal-rating').textContent = `★ ${m.rating}`;
+  $('modal-desc').textContent = m.description;
+  $('modal-cast').textContent = m.cast.join(', ');
+  $('modal-source').textContent = m.sourceName;
+  $('modal-rights').textContent = m.rightsStatus;
+  $('modal-evidence').textContent = m.rightsEvidence;
+
+  $('modal-downloads').innerHTML = m.downloadOptions.map(opt => `
+    <a href="${opt.url}" target="_blank" class="dl-btn">
+      <span class="dl-quality">${opt.quality}</span>
+      <span class="dl-size">${opt.size}</span>
+    </a>
+  `).join('');
+
+  $('modal').classList.remove('hidden');
+}
+
+$('closeModal').onclick = () => $('modal').classList.add('hidden');
+
+// Search & Filter Logic
+function handleFilter() {
+  const q = $('searchInput').value.toLowerCase();
+  const g = $('genreFilter').value;
+  const l = $('langFilter').value;
+
+  if(q === '' && g === '' && l === '') {
+    $('searchResultsSection').classList.add('hidden');
+    $('defaultSections').classList.remove('hidden');
+    return;
+  }
+
+  const filtered = allMovies.filter(m => {
+    const matchQ = m.title.toLowerCase().includes(q) || m.year.toString().includes(q);
+    const matchG = g === '' || m.genre.includes(g);
+    const matchL = l === '' || m.language === l;
+    return matchQ && matchG && matchL;
+  });
+
+  $('defaultSections').classList.add('hidden');
+  $('searchResultsSection').classList.remove('hidden');
+  
+  if(filtered.length === 0) {
+    $('searchGrid').innerHTML = '';
+    $('noResults').classList.remove('hidden');
+  } else {
+    $('noResults').classList.add('hidden');
+    renderGrid('searchGrid', filtered);
+  }
+}
+
+$('searchInput').addEventListener('input', handleFilter);
+$('genreFilter').addEventListener('change', handleFilter);
+$('langFilter').addEventListener('change', handleFilter);
