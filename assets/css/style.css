@@ -3,26 +3,38 @@
 :root { --bg: #07070b; --card: #13131c; --text: #e9e9f0; --dim: #9a9aab; --accent: #f5b301; --border: #23232f; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); color: var(--text); font-family: 'Poppins', 'Hind Siliguri', sans-serif; line-height: 1.6; }
+
+/* Header & Nav Fix */
 .site-header { position: sticky; top: 0; background: rgba(7,7,11,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 100; }
-.nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; flex-wrap: wrap; gap: 15px; }
+.nav-wrap { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; flex-direction: column; gap: 15px; }
+.nav-top { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--accent); text-decoration: none; letter-spacing: 1px; }
 .logo span { color: var(--text); }
+.nav-search input { background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; outline: none; width: 200px; font-family: inherit; font-size: 14px; }
 
-/* Navbar Fix */
-.main-nav { display: flex; gap: 20px; }
-.main-nav a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 15px; transition: 0.3s; }
+/* Menu Links */
+.main-nav { display: flex; gap: 25px; overflow-x: auto; padding-bottom: 5px; }
+.main-nav::-webkit-scrollbar { display: none; }
+.main-nav a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 16px; white-space: nowrap; transition: 0.3s; }
 .main-nav a:hover { color: var(--accent); }
 
-.nav-search input, select { background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; outline: none; font-family: inherit; font-size: 14px; }
-.nav-search input { width: 250px; }
+@media (min-width: 768px) {
+  .nav-wrap { flex-direction: row; justify-content: space-between; align-items: center; }
+  .nav-top { width: auto; }
+  .nav-search input { width: 250px; }
+}
+
 .hero { position: relative; height: 50vh; min-height: 300px; display: flex; align-items: flex-end; padding: 40px 20px; background: #000; }
 .hero-backdrop { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.4; mask-image: linear-gradient(to top, transparent, black); }
-.hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; width: 100%; }
+.hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100%; }
 .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: 48px; margin-bottom: 10px; letter-spacing: 1px; }
-.hero p { font-size: 15px; color: #ccc; margin-bottom: 15px; }
+.hero p { font-size: 15px; color: #ccc; margin-bottom: 15px; max-width: 600px; }
+
 .filter-section { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: flex; gap: 10px; }
+.filter-section select { background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 10px 15px; border-radius: 8px; outline: none; font-family: inherit; font-size: 14px; }
+
 .section { max-width: 1200px; margin: 0 auto; padding: 20px; }
-.section-title { font-family: 'Hind Siliguri', 'Bebas Neue', sans-serif; font-size: 26px; font-weight: 600; margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 10px; }
+.section-title { font-family: 'Hind Siliguri', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 10px; }
 .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
 .movie-card { background: var(--card); border-radius: 10px; overflow: hidden; cursor: pointer; transition: 0.3s; border: 1px solid var(--border); }
 .movie-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
@@ -30,6 +42,7 @@ body { background: var(--bg); color: var(--text); font-family: 'Poppins', 'Hind 
 .movie-info { padding: 12px; }
 .movie-info h3 { font-size: 15px; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: 'Poppins', sans-serif; }
 .movie-info p { font-size: 12px; color: var(--dim); }
+
 .btn-primary { display: inline-block; margin-top: 15px; background: var(--accent); color: #000; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; font-family: 'Hind Siliguri', sans-serif; font-size: 16px; }
 .site-footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); margin-top: 40px; color: var(--dim); font-size: 14px; }
 .footer-links { margin-bottom: 15px; }
@@ -56,8 +69,3 @@ body { background: var(--bg); color: var(--text); font-family: 'Poppins', 'Hind 
 .dl-btn:hover { background: #fff; }
 .dl-quality { font-size: 16px; font-family: 'Poppins', sans-serif; }
 .dl-size { font-size: 11px; font-weight: normal; opacity: 0.8; font-family: 'Hind Siliguri', sans-serif; }
-@media (max-width: 768px) {
-  .nav-wrap { flex-direction: column; align-items: flex-start; }
-  .nav-search input { width: 100%; }
-  .main-nav { width: 100%; justify-content: space-between; }
-}
