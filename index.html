@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diboh MovieBlast — Premium Public Domain Movies</title>
+<meta name="description" content="Download and stream verified public domain movies legally. High-quality 480p, 720p, 1080p.">
+<meta property="og:title" content="Diboh MovieBlast — Premium Public Domain Movies">
+<meta property="og:description" content="Download and stream verified public domain movies legally.">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -32,6 +35,11 @@
   <div class="filter-section">
     <select id="genreFilter"><option value="">সব জেনার</option></select>
     <select id="langFilter"><option value="">সব ভাষা</option></select>
+    <select id="sortFilter">
+      <option value="latest">সর্বশেষ</option>
+      <option value="popular">জনপ্রিয়</option>
+      <option value="rating">রেটিং</option>
+    </select>
   </div>
 
   <section class="section hidden" id="searchResultsSection">
@@ -48,6 +56,10 @@
     <section class="section" id="latest">
       <h2 class="section-title">🆕 সর্বশেষ যোগ করা</h2>
       <div id="latestGrid" class="movie-grid"></div>
+    </section>
+    <section class="section" id="popular">
+      <h2 class="section-title">⭐ সর্বাধিক জনপ্রিয়</h2>
+      <div id="popularGrid" class="movie-grid"></div>
     </section>
   </div>
 </main>
