@@ -7,10 +7,7 @@ fetch('data/movies.json')
     allMovies = data;
     initApp();
   })
-  .catch(err => {
-    console.error("Error loading movies:", err);
-    document.getElementById('hero-content').innerHTML = "<h1>Error loading data</h1>";
-  });
+  .catch(err => console.error("Error:", err));
 
 function initApp() {
   const topMovie = [...allMovies].sort((a,b) => b.popularity - a.popularity)[0];
@@ -22,7 +19,6 @@ function initApp() {
       <button class="btn-primary" onclick="openModal('${topMovie.id}')">বিস্তারিত দেখুন</button>
     `;
   }
-
   renderGrid('trendingGrid', [...allMovies].sort((a,b) => b.popularity - a.popularity).slice(0, 5));
   renderGrid('latestGrid', [...allMovies].sort((a,b) => b.year - a.year).slice(0, 5));
   renderGrid('popularGrid', [...allMovies].sort((a,b) => b.rating - a.rating).slice(0, 5));
@@ -38,7 +34,7 @@ function renderGrid(containerId, movies) {
   if(!container) return;
   container.innerHTML = movies.map(m => `
     <div class="movie-card" onclick="openModal('${m.id}')">
-      <img src="${m.poster}" alt="${m.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/200x300?text=No+Image'">
+      <img src="${m.poster}" alt="${m.title}" loading="lazy" onerror="this.src='https://placehold.co/400x600/13131c/f5b301?text=No+Image'">
       <div class="movie-info">
         <h3>${m.title}</h3>
         <p>${m.year} • ${m.language}</p>
@@ -50,8 +46,8 @@ function renderGrid(containerId, movies) {
 function openModal(id) {
   const m = allMovies.find(x => x.id === id);
   if(!m) return;
-  
   $('modal-img').src = m.poster;
+  $('modal-img').onerror = function() { this.src='https://placehold.co/300x450/13131c/f5b301?text=No+Image'; };
   $('modal-title').textContent = m.title;
   $('modal-year').textContent = m.year;
   $('modal-runtime').textContent = m.runtime;
@@ -68,7 +64,6 @@ function openModal(id) {
       <span class="dl-size">${opt.size}</span>
     </a>
   `).join('');
-
   $('modal').classList.remove('hidden');
 }
 
@@ -78,23 +73,19 @@ function handleFilter() {
   const q = $('searchInput').value.toLowerCase();
   const g = $('genreFilter').value;
   const l = $('langFilter').value;
-
   if(q === '' && g === '' && l === '') {
     $('searchResultsSection').classList.add('hidden');
     $('defaultSections').classList.remove('hidden');
     return;
   }
-
   const filtered = allMovies.filter(m => {
     const matchQ = m.title.toLowerCase().includes(q) || m.year.toString().includes(q);
     const matchG = g === '' || m.genre.includes(g);
     const matchL = l === '' || m.language === l;
     return matchQ && matchG && matchL;
   });
-
   $('defaultSections').classList.add('hidden');
   $('searchResultsSection').classList.remove('hidden');
-  
   if(filtered.length === 0) {
     $('searchGrid').innerHTML = '';
     $('noResults').classList.remove('hidden');
@@ -103,7 +94,6 @@ function handleFilter() {
     renderGrid('searchGrid', filtered);
   }
 }
-
 $('searchInput').addEventListener('input', handleFilter);
 $('genreFilter').addEventListener('change', handleFilter);
 $('langFilter').addEventListener('change', handleFilter);
