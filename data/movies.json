@@ -1,16 +1,62 @@
 [
   {
-    "id": "nosferatu-1922",
-    "title": "Nosferatu",
-    "poster": "https://archive.org/services/img/nosferatu",
-    "year": 1922,
-    "description": "F.W. Murnau পরিচালিত জার্মান হরর ক্লাসিক।"
+    "id": "nosferatu-1922", "title": "Nosferatu", "year": 1922, "language": "নির্বাক", "genre": ["Horror", "Fantasy"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nosferatu_poster.jpg/400px-Nosferatu_poster.jpg",
+    "description": "F.W. Murnau পরিচালিত জার্মান অভিব্যক্তিবাদী হরর ক্লাসিক। কাউন্ট অরলক নিয়ে এক রহস্যময় গল্প।",
+    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Nosferatu+1922"}]
   },
   {
-    "id": "metropolis-1927",
-    "title": "Metropolis",
-    "poster": "https://archive.org/services/img/MetropolisRestored",
-    "year": 1927,
-    "description": "ফ্রিৎজ ল্যাংয়ের ভবিষ্যৎবাদী মাস্টারপিস।"
+    "id": "metropolis-1927", "title": "Metropolis", "year": 1927, "language": "নির্বাক", "genre": ["Sci-Fi", "Drama"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Metropolis_poster.jpg/400px-Metropolis_poster.jpg",
+    "description": "ফ্রিৎজ ল্যাংয়ের ভবিষ্যৎবাদী মাস্টারপিস, সায়েন্স ফিকশনের ভিত্তি।",
+    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=Metropolis+1927"}]
+  },
+  {
+    "id": "night-living-dead-1968", "title": "Night of the Living Dead", "year": 1968, "language": "ইংরেজি", "genre": ["Horror", "Thriller"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Night_of_the_Living_Dead_%281968%29_poster.jpg/400px-Night_of_the_Living_Dead_%281968%29_poster.jpg",
+    "description": "জর্জ এ. রোমেরোর কাল্ট ক্লাসিক — আধুনিক জম্বি ঘরানার জন্মদাতা।",
+    "downloadOptions": [{"quality": "1080p", "url": "https://archive.org/search?query=Night+of+the+Living+Dead+1968"}]
+  },
+  {
+    "id": "the-general-1926", "title": "The General", "year": 1926, "language": "নির্বাক", "genre": ["Comedy", "Action"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/The_General_%281926%29_poster.jpg/400px-The_General_%281926%29_poster.jpg",
+    "description": "বাস্টার কিটন অভিনীত কমেডি ক্লাসিক। দুর্দান্ত স্টান্ট ও স্ল্যাপস্টিক অ্যাকশন।",
+    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=The+General+1926+Buster+Keaton"}]
+  },
+  {
+    "id": "cabinet-dr-caligari-1920", "title": "The Cabinet of Dr. Caligari", "year": 1920, "language": "নির্বাক", "genre": ["Horror", "Mystery"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/The_Cabinet_of_Dr._Caligari_poster.jpg/400px-The_Cabinet_of_Dr._Caligari_poster.jpg",
+    "description": "জার্মান অভিব্যক্তিবাদী সিনেমার প্রতীক — মনস্তাত্ত্বিক হরর।",
+    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Cabinet+of+Dr+Caligari+1920"}]
+  },
+  {
+    "id": "charade-1963", "title": "Charade", "year": 1963, "language": "ইংরেজি", "genre": ["Comedy", "Thriller", "Romance"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Charade_%281963_film%29_poster.jpg/400px-Charade_%281963_film%29_poster.jpg",
+    "description": "স্ট্যানলি ডোনেনের রোমান্টিক থ্রিলার। ক্যারি গ্রান্ট ও অড্রি হেপবার্ন।",
+    "downloadOptions": [{"quality": "1080p", "url": "https://archive.org/search?query=Charade+1963"}]
+  },
+  {
+    "id": "detour-1945", "title": "Detour", "year": 1945, "language": "ইংরেজি", "genre": ["Drama", "Thriller"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Detour_%281945_film%29_poster.jpg/400px-Detour_%281945_film%29_poster.jpg",
+    "description": "এডগার জি. উলমারের স্বল্প-বাজেট ফিল্ম নোয়ার।",
+    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=Detour+1945"}]
+  },
+  {
+    "id": "sherlock-jr-1924", "title": "Sherlock Jr.", "year": 1924, "language": "নির্বাক", "genre": ["Comedy", "Fantasy"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sherlock_Jr._%281924%29_poster.jpg/400px-Sherlock_Jr._%281924%29_poster.jpg",
+    "description": "বাস্টার কিটনের সেরা কাজগুলোর একটি। প্রজেকশনিস্ট স্বপ্নে নিজেকে গোয়েন্দা কল্পনা করে।",
+    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Sherlock+Jr+1924"}]
+  },
+  {
+    "id": "his-girl-friday-1940", "title": "His Girl Friday", "year": 1940, "language": "ইংরেজি", "genre": ["Comedy", "Drama"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/His_Girl_Friday_poster.jpg/400px-His_Girl_Friday_poster.jpg",
+    "description": "হাওয়ার্ড হকসের ঝলমলে স্ক্রুবল কমেডি।",
+    "downloadOptions": [{"quality": "720p", "url": "https://archive.org/search?query=His+Girl+Friday+1940"}]
+  },
+  {
+    "id": "plan-9-1959", "title": "Plan 9 from Outer Space", "year": 1959, "language": "ইংরেজি", "genre": ["Sci-Fi", "Horror"], 
+    "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Plan_9_from_Outer_Space_%281959%29_poster.jpg/400px-Plan_9_from_Outer_Space_%281959%29_poster.jpg",
+    "description": "এড উডের কিংবদন্তি সায়েন্স-ফিকশন ক্লাসিক।",
+    "downloadOptions": [{"quality": "480p", "url": "https://archive.org/search?query=Plan+9+from+Outer+Space+1959"}]
   }
 ]

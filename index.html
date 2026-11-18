@@ -3,16 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diboh MovieBlast</title>
+<title>Diboh MovieBlast — বৈধ পাবলিক ডোমেইন মুভি</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="nav-wrap"><a href="index.html" class="logo">Diboh<span>MovieBlast</span></a></div></header>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">Diboh<span>MovieBlast</span></a>
+    <nav class="main-nav"><a href="index.html">হোম</a><a href="#">ট্রেন্ডিং</a><a href="#">ক্যাটাগরি</a></nav>
+    <div class="nav-search"><input id="searchInput" type="search" placeholder="মুভি খুঁজুন..." autocomplete="off"></div>
+  </div>
+</header>
+
 <main>
-  <section class="hero" id="hero"><div class="hero-backdrop" id="hero-backdrop"></div><div class="hero-content" id="hero-content"></div></section>
-  <section class="section"><h2 class="section-title">🔥 ট্রেন্ডিং</h2><div id="grid-trending" class="movie-grid"></div></section>
+  <section class="hero" id="hero">
+    <div class="hero-backdrop" id="hero-backdrop"></div>
+    <div class="hero-content" id="hero-content"></div>
+  </section>
+
+  <div class="filter-section">
+    <select id="genreFilter"><option value="">সব জেনার</option></select>
+    <select id="langFilter"><option value="">সব ভাষা</option></select>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">🔥 ট্রেন্ডিং মুভি</h2>
+    <div id="movieGrid" class="movie-grid"></div>
+    <div id="noResults" class="empty-state hidden">
+      <h2>কোনো মুভি পাওয়া যায়নি</h2>
+      <p>অন্য কিছু লিখে সার্চ করুন।</p>
+    </div>
+  </section>
 </main>
-<footer class="site-footer"><div class="footer-bottom"><p>© 2025 Diboh MovieBlast</p></div></footer>
+
+<footer class="site-footer">
+  <p>© 2025 Diboh MovieBlast | শুধুমাত্র বৈধ পাবলিক ডোমেইন কন্টেন্ট।</p>
+</footer>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeModal">✕</button>
+    <img id="modal-img" src="" alt="Poster">
+    <div class="modal-info">
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <p><strong>সোর্স:</strong> Internet Archive</p>
+      <a href="#" id="modal-download" class="btn-primary" target="_blank">ডাউনলোড করুন</a>
+    </div>
+  </div>
+</div>
+
 <script src="assets/js/app.js"></script>
 </body>
 </html>
