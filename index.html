@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diboh MovieBlast — Premium Public Domain Movies</title>
-<meta name="description" content="Download and stream verified public domain movies legally. High-quality 480p, 720p, 1080p.">
-<meta property="og:title" content="Diboh MovieBlast — Premium Public Domain Movies">
-<meta property="og:description" content="Download and stream verified public domain movies legally.">
+<meta name="description" content="Download and stream verified public domain movies legally.">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -16,12 +14,18 @@
   <div class="nav-wrap">
     <div class="nav-top">
       <a href="index.html" class="logo">Diboh<span>MovieBlast</span></a>
-      <div class="nav-search"><input id="searchInput" type="search" placeholder="মুভি খুঁজুন..." autocomplete="off"></div>
+      <div class="nav-controls">
+        <div class="nav-search"><input id="searchInput" type="search" placeholder="Search movies..." data-translate-ph="search_ph"></div>
+        <select id="langSwitcher" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="bn">বাংলা</option>
+        </select>
+      </div>
     </div>
     <nav class="main-nav">
-      <a href="index.html">হোম</a>
-      <a href="#trending">ট্রেন্ডিং</a>
-      <a href="#latest">সর্বশেষ</a>
+      <a href="index.html" data-translate="nav_home">Home</a>
+      <a href="#trending" data-translate="nav_trending">Trending</a>
+      <a href="#latest" data-translate="nav_latest">Latest</a>
     </nav>
   </div>
 </header>
@@ -33,32 +37,36 @@
   </section>
 
   <div class="filter-section">
-    <select id="genreFilter"><option value="">সব জেনার</option></select>
-    <select id="langFilter"><option value="">সব ভাষা</option></select>
+    <select id="genreFilter">
+      <option value="" data-translate="all_genres">All Genres</option>
+    </select>
+    <select id="langFilter">
+      <option value="" data-translate="all_langs">All Languages</option>
+    </select>
     <select id="sortFilter">
-      <option value="latest">সর্বশেষ</option>
-      <option value="popular">জনপ্রিয়</option>
-      <option value="rating">রেটিং</option>
+      <option value="latest" data-translate="sort_latest">Latest</option>
+      <option value="popular" data-translate="sort_popular">Popular</option>
+      <option value="rating" data-translate="sort_rating">Rating</option>
     </select>
   </div>
 
   <section class="section hidden" id="searchResultsSection">
-    <h2 class="section-title">🔍 সার্চ ফলাফল</h2>
+    <h2 class="section-title" data-translate="search_results">Search Results</h2>
     <div id="searchGrid" class="movie-grid"></div>
-    <div id="noResults" class="empty-state hidden"><h2>কোনো মুভি পাওয়া যায়নি</h2></div>
+    <div id="noResults" class="empty-state hidden"><h2 data-translate="no_movies">No movies found</h2></div>
   </section>
 
   <div id="defaultSections">
     <section class="section" id="trending">
-      <h2 class="section-title">🔥 ট্রেন্ডিং মুভি</h2>
+      <h2 class="section-title" id="title_trending" data-translate="trending_title">Trending Movies</h2>
       <div id="trendingGrid" class="movie-grid"></div>
     </section>
     <section class="section" id="latest">
-      <h2 class="section-title">🆕 সর্বশেষ যোগ করা</h2>
+      <h2 class="section-title" id="title_latest" data-translate="latest_title">Latest Added</h2>
       <div id="latestGrid" class="movie-grid"></div>
     </section>
     <section class="section" id="popular">
-      <h2 class="section-title">⭐ সর্বাধিক জনপ্রিয়</h2>
+      <h2 class="section-title" id="title_popular" data-translate="popular_title">Most Popular</h2>
       <div id="popularGrid" class="movie-grid"></div>
     </section>
   </div>
@@ -66,11 +74,11 @@
 
 <footer class="site-footer">
   <div class="footer-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="copyright.html">Copyright Policy</a>
+    <a href="privacy.html" data-translate="privacy">Privacy Policy</a>
+    <a href="terms.html" data-translate="terms">Terms of Use</a>
+    <a href="copyright.html" data-translate="copyright">Copyright Policy</a>
   </div>
-  <p>© 2025 Diboh MovieBlast | শুধুমাত্র বৈধ পাবলিক ডোমেইন কন্টেন্ট।</p>
+  <p data-translate="footer_text">© 2025 Diboh MovieBlast | Only legal public domain content.</p>
 </footer>
 
 <div class="modal hidden" id="modal">
@@ -86,13 +94,13 @@
           <span id="modal-rating"></span>
         </div>
         <p id="modal-desc" class="synopsis"></p>
-        <p class="cast"><strong>Cast:</strong> <span id="modal-cast"></span></p>
+        <p class="cast"><strong data-translate="cast_label">Cast:</strong> <span id="modal-cast"></span></p>
         <div class="rights-box">
-          <p><strong>Source:</strong> <span id="modal-source"></span></p>
-          <p><strong>Rights:</strong> <span id="modal-rights"></span></p>
+          <p><strong data-translate="source_label">Source:</strong> <span id="modal-source"></span></p>
+          <p><strong data-translate="rights_label">Rights:</strong> <span id="modal-rights"></span></p>
           <p class="small-text"><em id="modal-evidence"></em></p>
         </div>
-        <h3 class="download-title">⬇️ Download Options</h3>
+        <h3 class="download-title" data-translate="download_title">⬇️ Download Options</h3>
         <div class="download-buttons" id="modal-downloads"></div>
       </div>
     </div>
